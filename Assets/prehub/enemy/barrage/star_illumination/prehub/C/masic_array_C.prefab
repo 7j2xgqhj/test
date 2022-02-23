@@ -123,9 +123,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3390504486610597468}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce95c9cad556c734aa7c48fe1a4e98e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6f94e874bbaad4ebde60b39af8e27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  span: 50
-  bulletPrefab: {fileID: 1969192026510040495, guid: 67a618fe15bc8624cb1016f88bb9b7f1, type: 3}
-  effect: {fileID: 5940570533722009535, guid: ef8a47fa26c5e3c4bb0f8b1d399c262b, type: 3}
+  ActionSpan: 0.2
+  BulletPrefab: {fileID: 1969192026510040495, guid: 67a618fe15bc8624cb1016f88bb9b7f1, type: 3}

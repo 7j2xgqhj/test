@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b5bb8389faec13419bc93d141faa754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectlike: {fileID: 6210242657332450447, guid: f6d98448a4f9d55428f9cacbfaac97af, type: 3}
-  bulletPrefab: {fileID: 6511695360713781921, guid: 919cfbfee393190499336ca48c29a8d5, type: 3}
+  Effectlike: {fileID: 6210242657332450447, guid: f6d98448a4f9d55428f9cacbfaac97af, type: 3}
+  bulletPrefab: {fileID: 5224858089283275492, guid: 919cfbfee393190499336ca48c29a8d5, type: 3}

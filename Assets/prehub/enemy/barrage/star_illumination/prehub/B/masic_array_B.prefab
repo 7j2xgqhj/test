@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1605842093299616900}
-  - component: {fileID: 4446543753145713737}
+  - component: {fileID: 442848793003001102}
   m_Layer: 8
   m_Name: masic_array_B
   m_TagString: Untagged
@@ -114,7 +114,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4446543753145713737
+--- !u!114 &442848793003001102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,9 +123,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605842093299616899}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce95c9cad556c734aa7c48fe1a4e98e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b6f94e874bbaad4ebde60b39af8e27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  span: 20
-  bulletPrefab: {fileID: 5451588939536370670, guid: bbd874bc29308d343bdf27a8f52de719, type: 3}
-  effect: {fileID: 5940570533722009535, guid: ef8a47fa26c5e3c4bb0f8b1d399c262b, type: 3}
+  ActionSpan: 0.1
+  BulletPrefab: {fileID: 5451588939536370670, guid: bbd874bc29308d343bdf27a8f52de719, type: 3}

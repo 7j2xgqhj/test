@@ -127,11 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceed9932485f7f4fbee685033dc1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startsize: 10
+  startsize: 0
   del: 0
-  duration: 5
-  extendspeed: 0
-  spinspeed: 5
+  duration: 0.4
+  extendspeed: 1
+  spinspeed: -2.6
 --- !u!1 &6210242657998035168
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ceed9932485f7f4fbee685033dc1acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startsize: 10
+  startsize: 0
   del: 0
-  duration: 5
-  extendspeed: 0
-  spinspeed: 5
+  duration: 0.4
+  extendspeed: 1
+  spinspeed: 2.6

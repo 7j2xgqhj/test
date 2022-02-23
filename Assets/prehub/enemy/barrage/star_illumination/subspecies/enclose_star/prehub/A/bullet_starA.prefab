@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbd053e10dbbcb47ad205269dbb92cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  damage: 5
+  Speed: 5
+  Damage: 2
 --- !u!114 &6436788512970249081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f792b7a870e3746b880bca5d7bb33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roop: 0
-  limitedreflect: 0
-  unlimitreflect: 0
-  reflect_limit: 2
-  stop: 0
+  isRoop: 0
+  isLimitedReflect: 0
+  isUnlimitReflect: 0
+  ReflectLimit: 1
+  isStop: 0
 --- !u!114 &-2483644840426077636
 MonoBehaviour:
   m_ObjectHideFlags: 0

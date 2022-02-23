@@ -167,8 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbd053e10dbbcb47ad205269dbb92cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  damage: 5
+  Speed: 20
+  Damage: 2
 --- !u!114 &3004277590792997772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,11 +181,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f792b7a870e3746b880bca5d7bb33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roop: 0
-  limitedreflect: 0
-  unlimitreflect: 0
-  reflect_limit: 2
-  stop: 0
+  isRoop: 0
+  isLimitedReflect: 0
+  isUnlimitReflect: 0
+  ReflectLimit: 1
+  isStop: 0
 --- !u!114 &-4229770187977696664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,5 +198,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9051d844e019c53448d194967045859d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change_time: 3
-  speed_magnification: 20
+  ChangeTime: 0.3
+  SpeedMagnification: -0.8

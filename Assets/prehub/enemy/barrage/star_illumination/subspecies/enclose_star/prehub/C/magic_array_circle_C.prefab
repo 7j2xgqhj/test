@@ -43,8 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7bd4c8b8e0e1145b0fb468450731e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  masic_array: {fileID: 6760174853674044588, guid: cc5dfb9b47f2c2f4897d848e16123690, type: 3}
-  masic_array_num: 5
-  spin_speed: 2
-  radius: 4
-  fort_angle: 72
+  MasicArray: {fileID: 6760174853674044588, guid: cc5dfb9b47f2c2f4897d848e16123690, type: 3}
+  MasicArrayNum: 5
+  SpinSpeed: 1
+  Radius: 3
+  FortAngle: 72

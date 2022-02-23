@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 105479704231549484}
   - component: {fileID: 7900803775091733583}
   - component: {fileID: 6644598570561778695}
-  - component: {fileID: 9139107993265960356}
+  - component: {fileID: -8615278374925285472}
   m_Layer: 9
   m_Name: bullet_star_C
   m_TagString: enemy_bullet
@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbd053e10dbbcb47ad205269dbb92cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  damage: 5
+  Speed: 1
+  Damage: 2
 --- !u!114 &6644598570561778695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,12 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0f792b7a870e3746b880bca5d7bb33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roop: 0
-  limitedreflect: 0
-  unlimitreflect: 0
-  reflect_limit: 2
-  stop: 0
---- !u!114 &9139107993265960356
+  isRoop: 0
+  isLimitedReflect: 0
+  isUnlimitReflect: 0
+  ReflectLimit: 1
+  isStop: 0
+--- !u!114 &-8615278374925285472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,9 +113,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4521915177806449113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 648c8ba165bb7ec4fa08711a6f7f030e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9051d844e019c53448d194967045859d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ChangeTime: 1
+  SpeedMagnification: 30
 --- !u!1 &5939411045889574497
 GameObject:
   m_ObjectHideFlags: 0

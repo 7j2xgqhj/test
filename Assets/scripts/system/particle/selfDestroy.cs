@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class selfDestroy : MonoBehaviour
+public class SelfDestroy : MonoBehaviour
 {
-    ParticleSystem particle;
+    private ParticleSystem particle;
     void Start()
     {
         particle = this.GetComponent<ParticleSystem>();
