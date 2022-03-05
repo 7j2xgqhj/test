@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HighSpeed: 15
-  LowSpeed: 0.5
+  LowSpeed: 2
 --- !u!114 &317649125
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class CircleFort : MonoBehaviour
     [Header("設置時間間隔")]public float InstallationTimeInterval=0f;
     [Header("砲の数")]public float NumOfForts=3f;
     [Header("設置円の半径")]public float RadiusOfCircle=3f;
+    [Header("設置順")]public bool InstallationOrder=true;
     public GameObject BulletPrefab;
     private bool isAction=false;
     private List<GameObject> poolObjList=new List<GameObject>();
@@ -25,15 +26,24 @@ public class CircleFort : MonoBehaviour
     }
     private IEnumerator periodicExecution(){
         isAction=true;
-        for(float i=0;i<NumOfForts;i++){
-            shotObject ( 
-                transform.position+new Vector3(RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i)
-                    ,RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i)
-                    ,0)
-                ,transform.rotation
+        if(InstallationOrder){
+            for(float i =0;i<NumOfForts;i++){
+            shotObject(
+            transform.position+new Vector3(RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i),RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i),0),
+            transform.rotation*Quaternion.Euler(0,0,(360/NumOfForts)*i-90)
             );
             yield return new WaitForSeconds(InstallationTimeInterval);
+            }
+        }else{
+            for(float i =0;i<NumOfForts;i++){
+            shotObject(
+            transform.position+new Vector3(-1*RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i),RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i),0),
+            transform.rotation*Quaternion.Euler(0,0,-(360/NumOfForts)*i-90)
+            );
+            yield return new WaitForSeconds(InstallationTimeInterval);
+            }
         }
+        
         yield return new WaitForSeconds(ActionSpan);
         isAction=false;
     }

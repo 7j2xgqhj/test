@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ButtonFunction : MonoBehaviour
 {
-    public GameObject EnemyObject;
+    public GameObject EnemyObject=null;
     public void LoadButtleScene(){
-        StaticVariable.EnemyObject=EnemyObject;
+        if(EnemyObject!=null){
+            StaticVariable.EnemyObject=EnemyObject;
+        }
         SceneManager.LoadScene("buttle");
     }
     public void LoadTitleScene(){

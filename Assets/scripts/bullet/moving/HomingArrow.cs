@@ -10,7 +10,7 @@ public class HomingArrow : MonoBehaviour
     private BulletState bulletState=null;
     private GameObject playerObject=null;
     private Transform target=null; 
-    void Start()
+    void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
         bulletState=GetComponent<BulletState>();

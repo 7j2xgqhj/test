@@ -45,6 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MasicArray: {fileID: 2310879478720320878, guid: a0122c14b8a7a07499e7a4af5e89528e, type: 3}
   MasicArrayNum: 3
-  SpinSpeed: 3
-  Radius: 3
+  SpinSpeed: 1
+  Radius: 5
   FortAngle: 120

@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2630462829333602013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7129239649225504627}
+  - component: {fileID: 1774956139145801052}
+  - component: {fileID: 7191949847824777872}
+  m_Layer: 8
+  m_Name: ArrowCircleCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7129239649225504627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630462829333602013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774956139145801052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630462829333602013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d607933725f964ba336a38a46815ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionSpan: 0
+  InstallationTimeInterval: 0.1
+  NumOfForts: 24
+  RadiusOfCircle: 13
+  InstallationOrder: 1
+  BulletPrefab: {fileID: 6237290028223682240, guid: 9efbe2d5ae7eb1041983d7647eae8a42, type: 3}
+--- !u!114 &7191949847824777872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2630462829333602013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d607933725f964ba336a38a46815ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionSpan: 0
+  InstallationTimeInterval: 0.05
+  NumOfForts: 48
+  RadiusOfCircle: 18
+  InstallationOrder: 0
+  BulletPrefab: {fileID: 6237290028223682240, guid: 9efbe2d5ae7eb1041983d7647eae8a42, type: 3}

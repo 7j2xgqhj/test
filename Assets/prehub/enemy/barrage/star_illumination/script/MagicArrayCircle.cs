@@ -14,7 +14,7 @@ public class MagicArrayCircle : MonoBehaviour
         for(float i =0;i<MasicArrayNum;i++){
             Instantiate (MasicArray, 
             transform.position+new Vector3(Radius*Mathf.Cos((2*Mathf.PI/MasicArrayNum)*i),Radius*Mathf.Sin((2*Mathf.PI/MasicArrayNum)*i),0),
-            transform.rotation*Quaternion.Euler(0,0,FortAngle*i+180),
+            transform.rotation*Quaternion.Euler(0,0,FortAngle*i-90),
             gameObject.transform
             );
         }
