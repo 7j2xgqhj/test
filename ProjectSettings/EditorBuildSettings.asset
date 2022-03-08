@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/buttle.unity
     guid: a6a64d764f8d95a4fbc8970a6411ec01
+  - enabled: 1
+    path: Assets/Scenes/Stageselect.unity
+    guid: 24335719b42689b4581ef7104e026620
   m_configObjects: {}
