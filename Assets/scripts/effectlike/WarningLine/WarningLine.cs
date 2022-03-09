@@ -7,47 +7,97 @@ public class WarningLine : MonoBehaviour
     [Header("出現時の大きさ")]public Vector2 Startsize=new Vector2(1f,1f);
     [Header("消滅の有無")]public bool isDelete=true;
     [Header("消滅までの時間")]public float Duration=5f;
-    [Header("フェードアウト")]public bool isFade=true;
-    [Header("フェードアウトまでの時間")]public float FadeTime=0.5f;
-    [Header("フェードアウト処理の間隔")]public float FadeActionTime=0.1f;
-    [Header("変化後のスケール")]public List<Vector2> SizeList=new List<Vector2>();
-    [Header("変化にかける時間")]public List<float> TimeList=new List<float>();
+    [Header("フェードイン")]public bool isFadeIn=true;
+    [Header("フェードインまでの時間")]public float FadeInTime=0.5f;
+    [Header("フェードイン処理の間隔")]public float FadeInActionTime=0.1f;
+    [Header("フェードアウト")]public bool isFadeOut=true;
+    [Header("フェードアウトまでの時間")]public float FadeOutTime=0.5f;
+    [Header("フェードアウト処理の間隔")]public float FadeOutActionTime=0.1f;
+    [Header("変化後のスケール")]public Vector2 Size=new Vector2(1f,1f);
+    [Header("変化にかける時間")]public float Time=1f;
+    [Header("処理間隔")]public float ActionTime=0.1f;
+    [Header("X端を固定")]public bool isKeepX=false;
+    [Header("Y端を固定")]public bool isKeepY=true;
     private SpriteRenderer spriteRenderer=null;
-    private float fadeSpeed=1f;
-    private bool isFadeActionSwitch=false;
-    private bool isFadeAction=false;
+    private float fadeInSpeed=0f;
+    private bool isFadeInActionSwitch=false;
+    private bool isFadeInAction=false;
+    private float fadeOutSpeed=0f;
+    private bool isFadeOutActionSwitch=false;
+    private bool isFadeOutAction=false;
+    private Vector2 changeSpeed=new Vector2(1f,1f);
+    private bool isAction =false;
+    private bool isActionSwitch=true;
     void Start()
     {
-        if(isFade){
-            spriteRenderer=GetComponent<SpriteRenderer>();
-            fadeSpeed=(spriteRenderer.color.a/FadeTime)*FadeActionTime;
-            StartCoroutine("fadeActionSwitch");
+        spriteRenderer=GetComponent<SpriteRenderer>();
+        if(isFadeOut){
+            isFadeInActionSwitch=true;
+            fadeOutSpeed=(spriteRenderer.color.a/FadeOutTime)*FadeOutActionTime;
+            StartCoroutine("fadeoutActionSwitch");
+        }
+        if(isFadeIn){
+            fadeInSpeed=(spriteRenderer.color.a/FadeInTime)*FadeInActionTime;
+            spriteRenderer.color-=new Color(0,0,0,spriteRenderer.color.a);
+            StartCoroutine("fadeInActionSwitch");
         }
         transform.localScale=new Vector3(Startsize.x,Startsize.y,transform.localScale.z);
         if(isDelete){
             StartCoroutine("deleteAction");
         }
-        
+        changeSpeed=((Size-Startsize)/Time)*ActionTime;
+        StartCoroutine("actionSwitch");
     }
     void Update()
     {
-        if(isFadeActionSwitch&&!isFadeAction){
-            StartCoroutine("fadeAction");
+        if(isFadeInActionSwitch&&!isFadeInAction){
+            StartCoroutine("fadeInAction");
+        }
+        if(isFadeOutActionSwitch&&!isFadeOutAction){
+            StartCoroutine("fadeOutAction");
+        }
+        if(isActionSwitch&&!isAction){
+            StartCoroutine("action");
         }
     }
     private IEnumerator deleteAction(){
         yield return new WaitForSeconds(Duration);
         Destroy(gameObject);
     }
-    private IEnumerator fadeActionSwitch(){
-        yield return new WaitForSeconds(Duration-FadeTime);
-        isFadeActionSwitch=true;
+    private IEnumerator fadeOutActionSwitch(){
+        yield return new WaitForSeconds(Duration-FadeOutTime);
+        isFadeOutActionSwitch=true;
     }
-    private IEnumerator fadeAction(){
-        isFadeAction=true;
-        yield return new WaitForSeconds(FadeActionTime);
-        spriteRenderer.color+=new Color(0,0,0,-fadeSpeed);
-        isFadeAction=false;
+    private IEnumerator fadeOutAction(){
+        isFadeOutAction=true;
+        yield return new WaitForSeconds(FadeOutActionTime);
+        spriteRenderer.color+=new Color(0,0,0,-fadeOutSpeed);
+        isFadeOutAction=false;
     }
-    
+    private IEnumerator fadeInActionSwitch(){
+        yield return new WaitForSeconds(FadeInTime);
+        isFadeInActionSwitch=false;
+    }
+    private IEnumerator fadeInAction(){
+        isFadeInAction=true;
+        yield return new WaitForSeconds(FadeInActionTime);
+        spriteRenderer.color+=new Color(0,0,0,fadeInSpeed);
+        isFadeInAction=false;
+    }
+    private IEnumerator action(){
+        isAction=true;
+        yield return new WaitForSeconds(ActionTime);
+        transform.localScale+=new Vector3(changeSpeed.x,changeSpeed.y,0);
+        if(isKeepX){
+            transform.position+=new Vector3(changeSpeed.x/2,0,0);
+        }
+        if(isKeepY){
+            transform.position+=new Vector3(0,changeSpeed.y/2,0);
+        }
+        isAction=false;
+        }
+    private IEnumerator actionSwitch(){
+        yield return new WaitForSeconds(Time);
+        isActionSwitch=false;
+    }
 }
