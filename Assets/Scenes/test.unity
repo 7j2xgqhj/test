@@ -223,13 +223,13 @@ MonoBehaviour:
   Duration: 5
   isFadeIn: 0
   FadeInTime: 1
-  FadeInActionTime: 0.1
-  isFadeOut: 1
+  FadeInActionTime: 0.08
+  isFadeOut: 0
   FadeOutTime: 1
-  FadeOutActionTime: 0.1
-  Size: {x: 1, y: 1}
+  FadeOutActionTime: 0.01
+  Size: {x: 2, y: 1}
   Time: 1
-  ActionTime: 0.01
+  ActionTime: 0.2
   isKeepX: 0
   isKeepY: 0
 --- !u!1 &791173926

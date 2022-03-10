@@ -32,11 +32,11 @@ public class WarningLine : MonoBehaviour
     {
         spriteRenderer=GetComponent<SpriteRenderer>();
         if(isFadeOut){
-            isFadeInActionSwitch=true;
             fadeOutSpeed=(spriteRenderer.color.a/FadeOutTime)*FadeOutActionTime;
-            StartCoroutine("fadeoutActionSwitch");
+            StartCoroutine("fadeOutActionSwitch");
         }
         if(isFadeIn){
+            isFadeInActionSwitch=true;
             fadeInSpeed=(spriteRenderer.color.a/FadeInTime)*FadeInActionTime;
             spriteRenderer.color-=new Color(0,0,0,spriteRenderer.color.a);
             StartCoroutine("fadeInActionSwitch");
