@@ -29,16 +29,16 @@ public class CircleFort : MonoBehaviour
         if(InstallationOrder){
             for(float i =0;i<NumOfForts;i++){
             shotObject(
-            transform.position+new Vector3(RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i),RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i),0),
-            transform.rotation*Quaternion.Euler(0,0,(360/NumOfForts)*i-90)
+            transform.position+new Vector3(RadiusOfCircle*Mathf.Cos(((360/NumOfForts)*i+transform.localEulerAngles.z+90)*Mathf.PI/180),RadiusOfCircle*Mathf.Sin(((360/NumOfForts)*i+transform.localEulerAngles.z+90)*Mathf.PI/180),0),
+            transform.rotation*Quaternion.Euler(0,0,(360/NumOfForts)*i)
             );
             yield return new WaitForSeconds(InstallationTimeInterval);
             }
         }else{
             for(float i =0;i<NumOfForts;i++){
             shotObject(
-            transform.position+new Vector3(-1*RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i),RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i),0),
-            transform.rotation*Quaternion.Euler(0,0,-(360/NumOfForts)*i-90)
+            transform.position+new Vector3(-1*RadiusOfCircle*Mathf.Cos((2*Mathf.PI/NumOfForts)*i+Mathf.PI/2),RadiusOfCircle*Mathf.Sin((2*Mathf.PI/NumOfForts)*i+Mathf.PI/2),0),
+            transform.rotation*Quaternion.Euler(0,0,-(360/NumOfForts)*i)
             );
             yield return new WaitForSeconds(InstallationTimeInterval);
             }

@@ -19,15 +19,14 @@ public class LineFort : MonoBehaviour
         for(float i =0;i<NumOfForts;i++){
             shotObject(
                 transform.position+new Vector3(
-                    Scale-i*(Scale*2/(NumOfForts-1)),
-                    0,
+                    (Scale-i*(Scale*2/(NumOfForts-1)))*Mathf.Cos((transform.localEulerAngles.z)*Mathf.PI/180),
+                    (Scale-i*(Scale*2/(NumOfForts-1)))*Mathf.Sin((transform.localEulerAngles.z)*Mathf.PI/180),
                     0
                 ),
                 transform.rotation
             );
             yield return new WaitForSeconds(InstallationTimeInterval);
         }
-        gameObject.SetActive(false);
     }
     private bool shotObject(Vector3 position,Quaternion rotation){
         // 使用中でないものを探して返す
