@@ -18,8 +18,6 @@ public class EnemyActionList : MonoBehaviour
         form=enemyActions.Form;
         enemyActions.BarrageObjectsList[form].SetActive(true);
     }
-
-    
     void Update()
     {
         if(form!=enemyActions.Form){
