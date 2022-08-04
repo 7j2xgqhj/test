@@ -122,6 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BarrageObjectsList:
+  - {fileID: 6701983093963722444}
+  - {fileID: 5829740811265532770}
+  - {fileID: 3071811218586448352}
   - {fileID: 5774478034904953173}
   ActionPatternsList: 00000000
 --- !u!114 &6701983095016693964
@@ -275,6 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e76a4f5fd24015a489bcde108f05601e, type: 3}
+--- !u!1 &5829740811265532770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8583631927774213853, guid: e76a4f5fd24015a489bcde108f05601e, type: 3}
+  m_PrefabInstance: {fileID: 2880132929583486399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5829740811265532771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8583631927774213852, guid: e76a4f5fd24015a489bcde108f05601e, type: 3}
@@ -416,6 +424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f31d580b3150fe478dba5be9078b098, type: 3}
+--- !u!1 &3071811218586448352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8620872765189415491, guid: 9f31d580b3150fe478dba5be9078b098, type: 3}
+  m_PrefabInstance: {fileID: 6701983095770567587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6327670187291135761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 779787525526035634, guid: 9f31d580b3150fe478dba5be9078b098, type: 3}
@@ -478,6 +491,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20e993168662a7a42acd3127013f03e9, type: 3}
+--- !u!1 &6701983093963722444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2707063280538998429, guid: 20e993168662a7a42acd3127013f03e9, type: 3}
+  m_PrefabInstance: {fileID: 8688377903213598801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6701983093963722445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2707063280538998428, guid: 20e993168662a7a42acd3127013f03e9, type: 3}
